@@ -105,7 +105,7 @@ int main(){
     cudaEventElapsedTime(&gpu_vec_time1,start2,stop2);
     cudaMemcpy(c3.data(),dc,bytes,cudaMemcpyDeviceToHost);
 
-    cout<<"Parallel Execution Time Required: "<<gpu_vec_time<<" ms\n";
+    cout<<"Parallel Execution Time Required: "<<gpu_vec_time1<<" ms\n";
     cudaFree(da);cudaFree(db);cudaFree(dc);
     cudaEventDestroy(start);
     cudaEventDestroy(stop);
