@@ -5,7 +5,7 @@ using namespace std;
 using namespace std::chrono;
 
 __global__ void matmul(int *a , int *b, int *c, int N){
-    int row=blockIdx.y*blockDim.x+threadIdx.y;
+    int row=blockIdx.y*blockDim.y+threadIdx.y;
     int col=blockIdx.x*blockDim.x+threadIdx.x;
 
     if(row<N && col<N){
